@@ -1,0 +1,9 @@
+<ul class="listado">
+  {% for cliente in clientes %}
+  <a href="{{ path('usuarios_cliente', { cliente: cliente.id_u_marca }) }}" >
+    <li {% if id_cliente is defined %}{% if id_cliente == cliente.id_u_marca %} style="background:#504B4C" {% endif %}{% endif %}>
+      {{ cliente.nombre_marca }} | 
+    </li>
+  </a>
+  {% endfor %}
+</ul>

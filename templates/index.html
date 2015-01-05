@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block clientes %}
+  {% include 'includes/nav-clientes.html' %}
+{% endblock %}
+
+{% block prospectos %}
+
+{% if prospectos is defined %}
+  {% include 'includes/nav-prospectos.html' %}
+{% endif %}
+
+{% endblock %}
+
+{% block prospecto %}
+
+{% if form is defined%}
+
+{{ form(form_pass, {'attr': {'novalidate': 'novalidate' }}) }}
+
+{{ form(form, {'attr': {'novalidate': 'novalidate' }}) }}
+
+{% endif %}
+
+{% endblock %}

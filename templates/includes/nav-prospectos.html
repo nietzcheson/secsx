@@ -1,0 +1,9 @@
+<ul class="listado">
+  {% for prospecto in prospectos %}
+  <a href="{{ path('prospecto', {cliente: id_cliente, prospecto: prospecto.id_u_cliente })}}">
+    <li>
+      {{ prospecto.nombre_prospecto }} {{ prospecto.apellido_prospecto }}
+    </li>
+  </a>
+  {% endfor %}
+</ul>
