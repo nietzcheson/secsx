@@ -56,13 +56,15 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
   'mysql_read' => array(
     'driver'    => 'pdo_mysql',
     'host'      => 'localhost',
-    'dbname'    => 'sisfc',
-    'user'      => 'sisfc',
-    'password'  => 'sisfc',
+    'dbname'    => 'sinergi2_sisfc',
+    'user'      => 'sinergi2_sisfc',
+    'password'  => 'T{%0u8vOQ)@6',
     'charset'   => 'utf8',
   ),
 ),
 ));
+
+$app['asset_path'] = 'http://secsx.sinergiafc.com/web';
 
 
 $app["clientes"] = function() use($app){
